@@ -21,9 +21,11 @@ TODO: Swift 5.9 really required?
 
 AutoResizingSheet is a SwiftPackage which allows to display sheets which will automatically resize itself with an animation when the content height changes. This is useful when the sheet fetches data, where it is not known how large the content will be.
 
+It also works for static sheet content. The height of the sheet is calculated so it matches the content perfectly.
+
 AutoResizingSheet also solves the issue of height detents for different devices. The content in the sheet will automatically be displayed, so that it fits the current device perfectly - no more blank spaces.
 
-AutoResizingSheet can be displayed using a SwiftUI ViewModifier or presented as a UIKit ViewController.
+AutoResizingSheet can be displayed using a SwiftUI ViewModifier or presented as a UIKit ViewController. See [Usage](#🛠️-usage) for details.
 
 ## 📕 Contents
 
