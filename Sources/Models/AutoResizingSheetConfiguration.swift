@@ -16,7 +16,7 @@ public struct AutoResizingSheetConfiguration {
     ///                            Defaults to `true`.
     ///   - showGrabber: If the grabber should be shown.
     ///                            Defaults to `true`.
-    ///   - initialDetent: Initial detent of the sheet before resizing..
+    ///   - initialDetent: Initial detent of the sheet before resizing.
     ///                            Defaults to `medium`.
     ///   - extendableToFullSize: If the sheet is extendable  to full size using the grabber.
     ///                            Defaults to `true`, will be `false` if `showGrabber` is `false`.

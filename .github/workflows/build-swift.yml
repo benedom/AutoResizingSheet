@@ -1,0 +1,37 @@
+# This workflow will build a Swift project
+
+name: Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform:
+          - iOS
+        xcode:
+          - ^15
+
+    runs-on: macos-13
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Get swift version
+      uses: swift-actions/setup-swift@v1
+    - name: Print Swift version
+      run: swift --version
+    - name: Build & Test
+      uses: mxcl/xcodebuild@v1
+      with:
+        xcode: ${{ matrix.xcode }}
+        platform: ${{ matrix.platform }}

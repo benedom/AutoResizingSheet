@@ -21,6 +21,6 @@ class AutoResizingSheetHostingController<Content: View>: UIHostingController<Con
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         isPresented = false
-        onDismiss?() // TODO: Test if it works
+        onDismiss?()
     }
 }

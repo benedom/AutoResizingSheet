@@ -13,16 +13,20 @@ public extension UIViewController {
     ///    - configuration: The configuration to use for the sheet.
     ///    - onDismiss: The closure to execute when dismissing the sheet.
     func presentViewAsAutoResizingSheet<Content: View>(
-        content: @escaping () -> Content,
+        content: Content,
         configuration: AutoResizingSheetConfiguration = AutoResizingSheetConfiguration(),
-        onDismiss: (() -> Void)?
+        onDismiss: (() -> Void)? = nil
     ) {
         let autoResizingSheetView = AutoResizingSheetView(
             sheetPresentationController: nil,
             scrollable: configuration.scrollable,
-            content: content
+            content: { content }
         )
-        let hostingController = UIHostingController(rootView: autoResizingSheetView)
+        let hostingController = AutoResizingSheetHostingController(
+            isPresented: .constant(true),
+            onDismiss: onDismiss,
+            rootView: autoResizingSheetView
+        )
         hostingController.setSheetPresentationStyle(with: configuration)
         hostingController.rootView.sheetPresentationController = hostingController.sheetPresentationController
         
@@ -43,7 +47,7 @@ public extension View {
     ///    - configuration: The configuration to use for the sheet.
     ///    - presentingViewController: The sheet is presented as a `UIHostingController` so it needs a `UIViewController` that presents it. If you do not supply one, the rootViewController is searched, which may fail.
     ///    - content: The content of the sheet view (e.g. a `VStack`).
-    func selfResizingSheet<Content: View>(
+    func autoResizingSheet<Content: View>(
         isPresented: Binding<Bool>,
         onDismiss: (() -> Void)? = nil,
         configuration: AutoResizingSheetConfiguration = AutoResizingSheetConfiguration(),
