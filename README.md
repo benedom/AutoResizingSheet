@@ -1,4 +1,4 @@
-# SwiftyCrop - SwiftUI
+# AutoResizingSheet - SwiftUI
 [![Build](https://github.com/benedom/AutoResizingSheet/actions/workflows/build-swift.yml/badge.svg?branch=master)](https://github.com/benedom/AutoResizingSheet/actions/workflows/build-swift.yml)
 ![Static Badge](https://img.shields.io/badge/Platform%20-%20iOS%20-%20light_green)
 ![Static Badge](https://img.shields.io/badge/iOS%20-%20%3E%2016.0%20-%20light_green)
@@ -43,7 +43,7 @@ AutoResizingSheet can be displayed using a SwiftUI ViewModifier or presented as 
 
 
 ## 💻 Installation
-There are two ways to use SwiftyCrop in your project:
+There are two ways to use AutoResizingSheet in your project:
 - using Swift Package Manager
 - manual install (embed Xcode Project)
 
@@ -72,7 +72,7 @@ This example shows how to display `AutoResizingSheet` inside a SwiftUI View:
 ```swift
 import SwiftUI
 import UIKit
-import SwiftyCrop
+import AutoResizingSheet
 
 struct ExampleView: View {
     let presentingViewController: UIViewController
