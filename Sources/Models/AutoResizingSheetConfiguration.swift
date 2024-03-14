@@ -2,10 +2,10 @@ import UIKit
 
 /// `AutoResizingSheetConfiguration` is a struct that defines the configuration for the auto resizing sheet.
 public struct AutoResizingSheetConfiguration {
-    let scrollable: Bool
-    let showGrabber: Bool
-    let initialDetent: UISheetPresentationController.Detent
-    let extendableToFullSize: Bool
+    public var scrollable: Bool
+    public var showGrabber: Bool
+    public var initialDetent: UISheetPresentationController.Detent
+    public var extendableToFullSize: Bool
     
     /// Creates a new instance of `AutoResizingSheetConfiguration`.
     /// 
