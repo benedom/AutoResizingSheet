@@ -60,6 +60,8 @@ To integrate `AutoResizingSheet` into your Xcode project using Xcode 15.0 or lat
 https://github.com/benedom/AutoResizingSheet, :branch="master"
 ```
 
+You can also specify a version instead of using the `master` branch.
+
 ### Manually
 
 If you prefer not to use any of dependency managers, you can integrate `AutoResizingSheet` into your project manually. Put `Sources/AutoResizingSheet` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
