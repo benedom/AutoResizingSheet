@@ -100,8 +100,9 @@ struct ExampleView: View {
 }
 ```
 
+:bangbang: NOTE :bangbang:
 ```
-:bangbang: NOTE: The resizing will not work properly if your view is wrapped inside a ScrollView. Use scrollable of AutoResizingSheetConfiguration instead, to make the content scrollable. :bangbang:
+The resizing will not work properly if your view is wrapped inside a ScrollView. Use scrollable of AutoResizingSheetConfiguration instead, to make the content scrollable.
 ```
 
 The viewModifier takes multiple parameters:
