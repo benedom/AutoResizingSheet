@@ -120,7 +120,7 @@ You can also configure `AutoResizingSheet` by passing a `AutoResizingSheetConfig
 
 | Property      | Description |
 | ----------- | ----------- |
-| `scrollable` | `Bool  `: Should the content be wrapped inside a scroll view. Defaults to `true`. |
+| `scrollable` | `Bool`: Should the content be wrapped inside a scroll view. Defaults to `true`. |
 | `showGrabber` | `Bool`: If the grabber should be shown. Defaults to `true`. |
 | `initialDetent` | `UISheetPresentationController.Detent`: Initial detent of the sheet before resizing. Defaults to `medium`. |
 | `extendableToFullSize` | `Bool`: If the sheet is extendable  to full size using the grabber. Defaults to `true`, will be `false` if `showGrabber` is `false`. |
