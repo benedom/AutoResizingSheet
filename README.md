@@ -128,7 +128,7 @@ You can also configure `AutoResizingSheet` by passing a `AutoResizingSheetConfig
 Create a configuration like this:
 ```swift
 let configuration = AutoResizingSheetConfiguration(
-    scrollable = true,
+    scrollable: true,
     showGrabber: true,
     initialDetent: .medium(),
     extendableToFullSize: true
