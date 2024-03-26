@@ -1,8 +1,10 @@
 # AutoResizingSheet
 [![Build](https://github.com/benedom/AutoResizingSheet/actions/workflows/build-swift.yml/badge.svg?branch=master)](https://github.com/benedom/AutoResizingSheet/actions/workflows/build-swift.yml)
+![GitHub Release]([https://img.shields.io/github/v/release/:user/:repo](https://img.shields.io/github/v/release/benedom/AutoResizingSheet?include_prereleases&sort=semver&display_name=tag))
 ![Static Badge](https://img.shields.io/badge/Platform%20-%20iOS%20-%20light_green)
 ![Static Badge](https://img.shields.io/badge/iOS%20-%20%3E%2016.0%20-%20light_green)
 ![Static Badge](https://img.shields.io/badge/Swift%20-%20%3E%205.9%20-%20orange)
+!
 <a href="https://github.com/benedom/AutoResizingSheet/blob/master/LICENSE.md">
   <img src="https://img.shields.io/badge/License%20-%20MIT%20-%20blue" alt="License - MIT">
 </a>
