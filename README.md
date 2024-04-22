@@ -4,7 +4,6 @@
 ![Static Badge](https://img.shields.io/badge/Platform%20-%20iOS%20-%20light_green)
 ![Static Badge](https://img.shields.io/badge/iOS%20-%20%3E%2016.0%20-%20light_green)
 ![Static Badge](https://img.shields.io/badge/Swift%20-%20%3E%205.9%20-%20orange)
-!
 <a href="https://github.com/benedom/AutoResizingSheet/blob/master/LICENSE.md">
   <img src="https://img.shields.io/badge/License%20-%20MIT%20-%20blue" alt="License - MIT">
 </a>
