@@ -7,7 +7,7 @@ extension UIHostingController {
     func setSheetPresentationStyle(with configuration: AutoResizingSheetConfiguration) {
         self.modalPresentationStyle = .pageSheet
         self.sheetPresentationController?.prefersGrabberVisible = configuration.showGrabber
-        var detents = [configuration.initialDetent]
+        var detents: [UISheetPresentationController.Detent] = [.medium()]
         if !detents.contains(.large()),
            configuration.showGrabber,
            configuration.extendableToFullSize {

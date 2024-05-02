@@ -4,7 +4,6 @@ import UIKit
 public struct AutoResizingSheetConfiguration {
     public var scrollable: Bool
     public var showGrabber: Bool
-    public var initialDetent: UISheetPresentationController.Detent
     public var extendableToFullSize: Bool
     
     /// Creates a new instance of `AutoResizingSheetConfiguration`.
@@ -16,20 +15,20 @@ public struct AutoResizingSheetConfiguration {
     ///                            Defaults to `true`.
     ///   - showGrabber: If the grabber should be shown.
     ///                            Defaults to `true`.
-    ///   - initialDetent: Initial detent of the sheet before resizing.
-    ///                            Defaults to `medium`.
     ///   - extendableToFullSize: If the sheet is extendable  to full size using the grabber.
     ///                            Defaults to `true`, will be `false` if `showGrabber` is `false`.
     ///
     public init(
         scrollable: Bool = true,
         showGrabber: Bool = true,
-        initialDetent: UISheetPresentationController.Detent = .medium(),
         extendableToFullSize: Bool = true
     ) {
         self.scrollable = scrollable
         self.showGrabber = showGrabber
-        self.initialDetent = initialDetent
-        self.extendableToFullSize = extendableToFullSize
+        if !showGrabber {
+            self.extendableToFullSize = false
+        } else {
+            self.extendableToFullSize = extendableToFullSize
+        }
     }
 }

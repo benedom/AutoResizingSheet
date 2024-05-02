@@ -43,22 +43,16 @@ public extension View {
     ///
     /// - Parameters:
     ///    - isPresented: Binding to control the presentation of the sheet.
-    ///    - onDismiss: The closure to execute when dismissing the sheet.
     ///    - configuration: The configuration to use for the sheet.
-    ///    - presentingViewController: The sheet is presented as a `UIHostingController` so it needs a `UIViewController` that presents it. If you do not supply one, the rootViewController is searched, which may fail.
     ///    - content: The content of the sheet view (e.g. a `VStack`).
     func autoResizingSheet<Content: View>(
         isPresented: Binding<Bool>,
-        onDismiss: (() -> Void)? = nil,
         configuration: AutoResizingSheetConfiguration = AutoResizingSheetConfiguration(),
-        presentingViewController: UIViewController?,
         @ViewBuilder content: @escaping () -> Content
     ) -> some View {
         self.modifier(AutoResizingSheetViewModifier(
             isPresented: isPresented,
-            onDismiss: onDismiss,
             configuration: configuration,
-            presentingViewController: presentingViewController,
             sheetContent: content
         ))
     }

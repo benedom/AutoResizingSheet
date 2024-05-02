@@ -82,7 +82,6 @@ import UIKit
 import AutoResizingSheet
 
 struct ExampleView: View {
-    let presentingViewController: UIViewController
     @State private var showSheet: Bool = false
 
     var body: some View {
@@ -92,8 +91,7 @@ struct ExampleView: View {
              }
         }
         .autoResizingSheet(
-            isPresented: $showSheet,
-            presentingViewController: presentingViewController
+            isPresented: $showSheet
         ) {
             // Your sheet content View
             SheetContentView()
@@ -112,9 +110,7 @@ The viewModifier takes multiple parameters:
 | Paramter      | Description |
 | ----------- | ----------- |
 | `isPresented` | `Binding<Bool>`: Binding to control the displaying of the sheet. |
-| `onDismiss` | `(() -> Void)?`: A closure that is executed when the sheet is dismissed. Defaults to `nil`. |
 | `configuration` | `AutoResizingSheetConfiguration`: The custom configuration to use. If not set, uses default configuration. |
-| `presentingViewController` | `UIViewController?`: The sheet is presented as a `UIHostingController` so it needs a `UIViewController` that presents it. If you do not supply one, the rootViewController is searched, which may fail. |
 | `@ViewBuilder content` | `@escaping () -> Content`: The content of the sheet as a SwiftUI View. |
 
 <br></br>
@@ -124,7 +120,6 @@ You can also configure `AutoResizingSheet` by passing a `AutoResizingSheetConfig
 | ----------- | ----------- |
 | `scrollable` | `Bool`: Should the content be wrapped inside a scroll view. Defaults to `true`. |
 | `showGrabber` | `Bool`: If the grabber should be shown. Defaults to `true`. |
-| `initialDetent` | `UISheetPresentationController.Detent`: Initial detent of the sheet before resizing. Defaults to `medium`. |
 | `extendableToFullSize` | `Bool`: If the sheet is extendable  to full size using the grabber. Defaults to `true`, will be `false` if `showGrabber` is `false`. |
 
 Create a configuration like this:
@@ -132,7 +127,6 @@ Create a configuration like this:
 let configuration = AutoResizingSheetConfiguration(
     scrollable: true,
     showGrabber: true,
-    initialDetent: .medium(),
     extendableToFullSize: true
 )
 ```
@@ -142,8 +136,7 @@ and use it like this:
 ```swift
 .autoResizingSheet(
     isPresented: $showSheet,
-    configuration: configuration,
-    presentingViewController: presentingViewController
+    configuration: configuration
     ) {
         // Your sheet content View
         SheetContentView()

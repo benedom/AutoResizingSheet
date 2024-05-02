@@ -43,22 +43,20 @@ struct ContentView: View {
         .padding()
         .autoResizingSheet(
             isPresented: $showStaticSheet,
-            configuration: configuration,
-            presentingViewController: nil // Supply a ViewController here if possible
+            configuration: configuration
         ) {
             StaticSheetContentView()
+            
         }
         .autoResizingSheet(
             isPresented: $showDynamicSheet,
-            configuration: configuration,
-            presentingViewController: nil
+            configuration: configuration
         ) {
             DynamicSheetContentView()
         }
         .autoResizingSheet(
             isPresented: $showAsyncSheet,
-            configuration: configuration,
-            presentingViewController: nil
+            configuration: configuration
         ) {
             AsyncSheetContentView()
         }
