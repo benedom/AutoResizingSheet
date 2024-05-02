@@ -15,12 +15,10 @@ struct AutoResizingSheetViewModifier<SheetContent: View>: ViewModifier {
         _isPresented = isPresented
         self.configuration = configuration
         self.sheetContent = sheetContent as () -> SheetContent
-        selectedDetent = .medium
-        detents = []
         
         let initialDetent: PresentationDetent = .medium
-        selectedDetent = initialDetent
-        detents = [initialDetent]
+        _selectedDetent = State(initialValue: initialDetent)
+        _detents = State(initialValue: [initialDetent])
         if configuration.extendableToFullSize {
             detents.insert(.large)
         }
