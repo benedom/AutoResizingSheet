@@ -36,6 +36,7 @@ struct AutoResizingSheetViewModifier<SheetContent: View>: ViewModifier {
                                 updateDetents(newHeigh: newSize.height)
                             }
                     }
+                    .background(Color(configuration.scrollBackground))
                 } else {
                     sheetContent()
                         .presentationDetents(detents, selection: $selectedDetent)

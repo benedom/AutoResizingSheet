@@ -120,13 +120,15 @@ You can also configure `AutoResizingSheet` by passing a `AutoResizingSheetConfig
 | `scrollable` | `Bool`: Should the content be wrapped inside a scroll view. Defaults to `true`. |
 | `showGrabber` | `Bool`: If the grabber should be shown. Defaults to `true`. |
 | `extendableToFullSize` | `Bool`: If the sheet is extendable  to full size using the grabber. Defaults to `true`, will be `false` if `showGrabber` is `false`. |
+| `scrollBackground` | `UIColor`: If scrollable, defines the background color of the `ScrollView`. Defaults to `.clear`. |
 
 Create a configuration like this:
 ```swift
 let configuration = AutoResizingSheetConfiguration(
     scrollable: true,
     showGrabber: true,
-    extendableToFullSize: true
+    extendableToFullSize: true,
+    scrollBackground: .clear
 )
 ```
 
