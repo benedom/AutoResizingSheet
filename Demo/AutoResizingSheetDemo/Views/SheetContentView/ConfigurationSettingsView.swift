@@ -3,7 +3,6 @@ import SwiftUI
 
 struct ConfigurationSettingsView: View {
     @Binding var configuration: AutoResizingSheetConfiguration
-    private let detents: [UISheetPresentationController.Detent] = [.medium(), .large()]
     
     var body: some View {
         VStack(spacing: 15) {

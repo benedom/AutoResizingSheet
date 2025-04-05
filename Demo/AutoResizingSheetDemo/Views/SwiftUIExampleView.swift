@@ -1,12 +1,11 @@
 import SwiftUI
 import AutoResizingSheet
 
-struct ContentView: View {
+struct SwiftUIExampleView: View {
+    let configuration: AutoResizingSheetConfiguration
     @State private var showStaticSheet = false
     @State private var showDynamicSheet = false
     @State private var showAsyncSheet = false
-    @State private var showConfigurationSettings = false
-    @State private var configuration = AutoResizingSheetConfiguration()
     
     var body: some View {
         VStack(spacing: 15) {
@@ -31,14 +30,6 @@ struct ContentView: View {
             }
             
             Spacer()
-            
-            Button {
-                showConfigurationSettings.toggle()
-            } label: {
-                Image(systemName: "gearshape")
-                
-                Text("Configuration Settings")
-            }
         }
         .padding()
         .autoResizingSheet(
@@ -60,12 +51,9 @@ struct ContentView: View {
         ) {
             AsyncSheetContentView()
         }
-        .sheet(isPresented: $showConfigurationSettings) {
-            ConfigurationSettingsView(configuration: $configuration)
-        }
     }
 }
 
 #Preview {
-    ContentView()
+    SwiftUIExampleView(configuration: AutoResizingSheetConfiguration())
 }

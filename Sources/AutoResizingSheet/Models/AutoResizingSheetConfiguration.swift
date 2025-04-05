@@ -8,7 +8,7 @@ public struct AutoResizingSheetConfiguration {
     public var scrollBackground: UIColor
     
     /// Creates a new instance of `AutoResizingSheetConfiguration`.
-    /// 
+    ///
     /// - Note: The resizing will not work properly if your view is wrapped inside a `ScrollView`. Use `scrollable` of `AutoResizingSheetConfiguration` instead, to make the content scrollable.
     ///
     /// - Parameters:
@@ -30,10 +30,6 @@ public struct AutoResizingSheetConfiguration {
         self.scrollable = scrollable
         self.showGrabber = showGrabber
         self.scrollBackground = scrollBackground
-        if !showGrabber {
-            self.extendableToFullSize = false
-        } else {
-            self.extendableToFullSize = extendableToFullSize
-        }
+        self.extendableToFullSize = extendableToFullSize
     }
 }

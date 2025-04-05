@@ -3,31 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7D0533992B60AE9C001056D4 /* AutoResizingSheetDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0533982B60AE9C001056D4 /* AutoResizingSheetDemoApp.swift */; };
-		7D05339B2B60AE9C001056D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D05339A2B60AE9C001056D4 /* ContentView.swift */; };
 		7D05339D2B60AE9D001056D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D05339C2B60AE9D001056D4 /* Assets.xcassets */; };
-		BA3A62732BA2EABD00390DEA /* ConfigurationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A62722BA2EABD00390DEA /* ConfigurationSettingsView.swift */; };
-		BA3A62752BA2FFEE00390DEA /* AsyncSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A62742BA2FFEE00390DEA /* AsyncSheetContentView.swift */; };
 		BA934E922BA1F88A00A1648A /* AutoResizingSheet in Frameworks */ = {isa = PBXBuildFile; productRef = BA934E912BA1F88A00A1648A /* AutoResizingSheet */; };
-		BA934E942BA2E53F00A1648A /* StaticSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA934E932BA2E53F00A1648A /* StaticSheetContentView.swift */; };
-		BA934E972BA2E84700A1648A /* DynamicSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA934E962BA2E84700A1648A /* DynamicSheetContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D0533952B60AE9C001056D4 /* AutoResizingSheetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoResizingSheetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0533982B60AE9C001056D4 /* AutoResizingSheetDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResizingSheetDemoApp.swift; sourceTree = "<group>"; };
-		7D05339A2B60AE9C001056D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D05339C2B60AE9D001056D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D0C5DFA2B63F03F004BD980 /* AutoResizingSheetDemo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AutoResizingSheetDemo.xcconfig; sourceTree = "<group>"; };
-		BA3A62722BA2EABD00390DEA /* ConfigurationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSettingsView.swift; sourceTree = "<group>"; };
-		BA3A62742BA2FFEE00390DEA /* AsyncSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSheetContentView.swift; sourceTree = "<group>"; };
-		BA934E932BA2E53F00A1648A /* StaticSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSheetContentView.swift; sourceTree = "<group>"; };
-		BA934E962BA2E84700A1648A /* DynamicSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSheetContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1513292E2DA1445A00F3E834 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7D0533922B60AE9C001056D4 /* Frameworks */ = {
@@ -60,24 +54,12 @@
 		7D0533972B60AE9C001056D4 /* AutoResizingSheetDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7D05339A2B60AE9C001056D4 /* ContentView.swift */,
+				1513292E2DA1445A00F3E834 /* Views */,
 				7D0533982B60AE9C001056D4 /* AutoResizingSheetDemoApp.swift */,
-				BA3A62722BA2EABD00390DEA /* ConfigurationSettingsView.swift */,
-				BA934E952BA2E83300A1648A /* SheetContentView */,
 				7D05339C2B60AE9D001056D4 /* Assets.xcassets */,
 				7D0C5DFA2B63F03F004BD980 /* AutoResizingSheetDemo.xcconfig */,
 			);
 			path = AutoResizingSheetDemo;
-			sourceTree = "<group>";
-		};
-		BA934E952BA2E83300A1648A /* SheetContentView */ = {
-			isa = PBXGroup;
-			children = (
-				BA934E932BA2E53F00A1648A /* StaticSheetContentView.swift */,
-				BA934E962BA2E84700A1648A /* DynamicSheetContentView.swift */,
-				BA3A62742BA2FFEE00390DEA /* AsyncSheetContentView.swift */,
-			);
-			path = SheetContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +76,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1513292E2DA1445A00F3E834 /* Views */,
 			);
 			name = AutoResizingSheetDemo;
 			packageProductDependencies = (
@@ -155,12 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA934E972BA2E84700A1648A /* DynamicSheetContentView.swift in Sources */,
-				BA3A62752BA2FFEE00390DEA /* AsyncSheetContentView.swift in Sources */,
-				7D05339B2B60AE9C001056D4 /* ContentView.swift in Sources */,
 				7D0533992B60AE9C001056D4 /* AutoResizingSheetDemoApp.swift in Sources */,
-				BA3A62732BA2EABD00390DEA /* ConfigurationSettingsView.swift in Sources */,
-				BA934E942BA2E53F00A1648A /* StaticSheetContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

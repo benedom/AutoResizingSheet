@@ -19,9 +19,6 @@ struct AutoResizingSheetViewModifier<SheetContent: View>: ViewModifier {
         let initialDetent: PresentationDetent = .medium
         _selectedDetent = State(initialValue: initialDetent)
         _detents = State(initialValue: [initialDetent])
-        if configuration.extendableToFullSize {
-            detents.insert(.large)
-        }
     }
     
     func body(content: Content) -> some View {
@@ -55,10 +52,18 @@ struct AutoResizingSheetViewModifier<SheetContent: View>: ViewModifier {
             detents.insert(newDetent)
         }
         
-        if newDetent != .large,
-           detents.contains(.large),
-           !configuration.extendableToFullSize {
-            detents = [newDetent]
+        // Remove the initial medium detent
+        if detents.contains(.medium) {
+            detents.remove(.medium)
+        }
+        
+        // Adjust full size detent
+        let shouldShowFullSize = configuration.extendableToFullSize && configuration.showGrabber
+        if shouldShowFullSize,
+           !detents.contains(.large) {
+            detents.insert(.large)
+        } else {
+            detents.remove(.large)
         }
         
         selectedDetent = newDetent
