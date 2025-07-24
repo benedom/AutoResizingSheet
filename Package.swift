@@ -4,24 +4,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "AutoResizingSheet",
-    platforms: [.iOS(.v16)],
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "AutoResizingSheet",
-            targets: ["AutoResizingSheet"]),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "AutoResizingSheet",
-            path: "Sources",
-            resources: [.copy("PrivacyInfo.xcprivacy")]
-        ),
-        .testTarget(
-            name: "AutoResizingSheetTests",
-            dependencies: ["AutoResizingSheet"]),
-    ]
+  name: "AutoResizingSheet",
+  platforms: [.iOS(.v16)],
+  products: [
+    // Products define the executables and libraries a package produces, making them visible to other packages.
+    .library(
+      name: "AutoResizingSheet",
+      targets: ["AutoResizingSheet"]),
+  ],
+  targets: [
+    // Targets are the basic building blocks of a package, defining a module or a test suite.
+    // Targets can depend on other targets in this package and products from dependencies.
+    .target(
+      name: "AutoResizingSheet",
+      path: "Sources",
+      resources: [.copy("PrivacyInfo.xcprivacy")]
+    ),
+    .testTarget(
+      name: "AutoResizingSheetTests",
+      dependencies: ["AutoResizingSheet"]),
+  ]
 )
